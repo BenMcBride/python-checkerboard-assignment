@@ -5,35 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkerboard</title>
-    <style>
-        body {
-            text-align: center;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: fit-content;
-            flex-direction: column;
-            border: 5px solid rgb(88, 88, 88);
-            margin: 0 auto;
-        }
-        .box {
-            width: 100px;
-            height: 100px;
-        }
-        .dark {
-            background-color: black;
-        }
-        .light {
-            background-color: darkred;
-        }
-        .row {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
     <body>
         <div class="container">
