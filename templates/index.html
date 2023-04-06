@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            flex-direction: column;
+            border: 5px solid rgb(88, 88, 88);
+            margin: 0 auto;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+        .dark {
+            background-color: black;
+        }
+        .light {
+            background-color: darkred;
+        }
+        .row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    </style>
+</head>
+    <body>
+        <div class="container">
+            {% for i in range(rows) %}
+                <div class="row">
+                    {%for j in range(columns)%}
+                        {% if i % 2 == 0 %}
+                            {%if j % 2 == 0 %}
+                                <div class="box dark"></div>
+                            {%else:%}
+                                <div class="box light"></div>
+                            {%endif%}
+                        {% else %}
+                            {%if j % 2 == 1 %}
+                                <div class="box dark"></div>
+                            {%else:%}
+                                <div class="box light"></div>
+                            {%endif%}
+                        {% endif %}
+                        
+                    {%endfor%}
+                </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>
