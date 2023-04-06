@@ -1,7 +1,7 @@
+
 body {
   text-align: center;
 }
-
 .container {
   display: flex;
   justify-content: center;
@@ -15,14 +15,6 @@ body {
 .box {
   width: 100px;
   height: 100px;
-}
-
-.dark {
-  background-color: black;
-}
-
-.light {
-  background-color: darkred;
 }
 
 .row {

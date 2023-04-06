@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkerboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .dark {
+            background-color: {{darkClr}};
+        }
+        .light {
+            background-color: {{lightClr}};
+        }
+    </style>
 </head>
     <body>
         <div class="container">
@@ -25,7 +33,6 @@
                                 <div class="box light"></div>
                             {%endif%}
                         {% endif %}
-                        
                     {%endfor%}
                 </div>
             {% endfor %}
